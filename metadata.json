@@ -1,0 +1,6 @@
+{
+  "name": "kbridge",
+  "description": "Invoice financing portal opened to the ledger. Turn short-term trade receivables into transparent, on-chain investments.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
