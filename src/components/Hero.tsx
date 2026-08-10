@@ -2,8 +2,7 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { CheckCircle2, ArrowRight, ShieldCheck, Sparkles } from 'lucide-react';
 import { VaultGlyph, LedgerWalletGlyph, RWATokenGlyph } from './AnimatedGlyphs';
-
-const founderImg = '/src/assets/images/hero_founder_portrait_1786354465043.jpg';
+import founderImg from '../assets/images/hero_founder_portrait_1786354465043.jpg';
 
 interface HeroProps {
   onOpenDemo: () => void;

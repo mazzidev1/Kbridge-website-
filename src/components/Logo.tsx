@@ -8,8 +8,8 @@ interface LogoProps {
 
 export const Logo: React.FC<LogoProps> = ({ className = '', subtext = 'A Kundabox Corporation portal', showSubtext = true }) => {
   return (
-    <div className={`flex items-center gap-[14px] ${className}`}>
-      <div className="flex items-center gap-[10px]">
+    <div className={`flex items-center gap-[12px] sm:gap-[14px] shrink-0 ${className}`}>
+      <div className="flex items-center gap-[8px] sm:gap-[10px] shrink-0">
         {/* Boxed 'K' logo matching uploaded image */}
         <div className="w-[30px] h-[30px] border-[1.5px] border-[#101C2B] flex items-center justify-center font-mono font-semibold text-[16px] text-[#101C2B] leading-none select-none rounded-[1px]">
           K
