@@ -61,17 +61,17 @@ export const Header: React.FC<HeaderProps> = ({
         </div>
 
         {/* Header Action Buttons & Mobile Toggle */}
-        <div className="flex items-center gap-2 sm:gap-2.5 shrink-0">
+        <div className="flex items-center gap-2.5 shrink-0">
           <button
             onClick={onOpenWaitlist}
-            className="hidden md:inline-flex btn btn-ghost btn-sm text-[12.5px] sm:text-[13px] border border-[#CFCDC0] hover:border-[#101C2B] text-[#101C2B] px-3 py-1.5 whitespace-nowrap"
+            className="hidden lg:inline-flex btn btn-ghost btn-sm text-[13px] border border-[#CFCDC0] hover:border-[#101C2B] text-[#101C2B] px-3.5 py-1.5 whitespace-nowrap"
           >
             Join waitlist
           </button>
           
           <button
             onClick={onOpenDemo}
-            className="hidden sm:inline-flex btn btn-primary btn-sm text-[12.5px] sm:text-[13px] bg-[#101C2B] text-[#F7F7F2] hover:bg-[#1E3D34] px-2.5 sm:px-3.5 py-1.5 whitespace-nowrap shadow-2xs font-medium"
+            className="hidden lg:inline-flex btn btn-primary btn-sm text-[13px] bg-[#101C2B] text-[#F7F7F2] hover:bg-[#1E3D34] px-3.5 py-1.5 whitespace-nowrap shadow-2xs font-medium"
           >
             Book a demo
           </button>
