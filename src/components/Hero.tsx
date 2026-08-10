@@ -2,7 +2,9 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { CheckCircle2, ArrowRight, ShieldCheck, Sparkles } from 'lucide-react';
 import { VaultGlyph, LedgerWalletGlyph, RWATokenGlyph } from './AnimatedGlyphs';
-import founderImg from '../assets/images/hero_founder_portrait_1786354465043.jpg';
+import founderImgAsset from '../assets/images/hero_founder_portrait_1786354465043.jpg';
+
+const founderImg = founderImgAsset || '/assets/images/hero_founder_portrait_1786354465043.jpg';
 
 interface HeroProps {
   onOpenDemo: () => void;
@@ -45,7 +47,6 @@ export const Hero: React.FC<HeroProps> = ({
           transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
         >
           <div className="font-body font-semibold text-[12px] tracking-wider uppercase text-[#2F5D50] mb-5 flex items-center gap-2.5">
-            <span className="w-5.5 h-[1px] bg-[#2F5D50]"></span>
             Instant invoice liquidity, verified on-chain
           </div>
           
@@ -75,7 +76,6 @@ export const Hero: React.FC<HeroProps> = ({
           </div>
 
           <div className="font-body text-[13px] text-[#3C4859] flex items-center gap-2.5 font-medium pt-2 border-t border-[#CFCDC0]/60 max-w-[480px]">
-            <span className="w-2 h-2 rounded-full bg-[#2F5D50] animate-pulse"></span>
             Non-recourse options • Bank-grade compliance • Institutional investors
           </div>
         </motion.div>

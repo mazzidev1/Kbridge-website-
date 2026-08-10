@@ -71,7 +71,7 @@ export const Header: React.FC<HeaderProps> = ({
           
           <button
             onClick={onOpenDemo}
-            className="hidden sm:inline-flex btn btn-primary btn-sm text-[12.5px] sm:text-[13px] bg-[#101C2B] text-[#F7F7F2] hover:bg-[#1E3D34] px-3 py-1.5 whitespace-nowrap"
+            className="hidden sm:inline-flex btn btn-primary btn-sm text-[12.5px] sm:text-[13px] bg-[#101C2B] text-[#F7F7F2] hover:bg-[#1E3D34] px-2.5 sm:px-3.5 py-1.5 whitespace-nowrap shadow-2xs font-medium"
           >
             Book a demo
           </button>
@@ -79,7 +79,7 @@ export const Header: React.FC<HeaderProps> = ({
           {/* Mobile Hamburger Menu Toggle */}
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="lg:hidden p-2 text-[#101C2B] hover:bg-[#CFCDC0]/40 rounded-[4px] transition-colors cursor-pointer border border-[#CFCDC0] bg-white/60"
+            className="lg:hidden h-[34px] w-[34px] sm:h-[36px] sm:w-[36px] text-[#101C2B] hover:bg-[#CFCDC0]/50 rounded-[4px] transition-colors cursor-pointer border border-[#CFCDC0] bg-white/80 flex items-center justify-center shrink-0"
             aria-label="Toggle navigation menu"
           >
             {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
