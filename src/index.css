@@ -46,59 +46,61 @@ body {
 }
 
 /* Custom button classes from design system */
-.btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  font-family: var(--font-body);
-  font-size: 14.5px;
-  font-weight: 500;
-  padding: 11px 20px;
-  border-radius: 2px;
-  cursor: pointer;
-  text-decoration: none;
-  border: 1px solid transparent;
-  white-space: nowrap;
-  transition: all 0.15s ease;
-}
+@layer components {
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-family: var(--font-body);
+    font-size: 14.5px;
+    font-weight: 500;
+    padding: 11px 20px;
+    border-radius: 2px;
+    cursor: pointer;
+    text-decoration: none;
+    border: 1px solid transparent;
+    white-space: nowrap;
+    transition: all 0.15s ease;
+  }
 
-.btn-primary {
-  background: var(--ink);
-  color: var(--paper-2);
-  border-color: var(--ink);
-}
+  .btn-primary {
+    background: var(--ink);
+    color: var(--paper-2);
+    border-color: var(--ink);
+  }
 
-.btn-primary:hover {
-  background: var(--ledger-dark);
-  border-color: var(--ledger-dark);
-}
+  .btn-primary:hover {
+    background: var(--ledger-dark);
+    border-color: var(--ledger-dark);
+  }
 
-.btn-ledger {
-  background: var(--ledger);
-  color: var(--white);
-  border-color: var(--ledger);
-}
+  .btn-ledger {
+    background: var(--ledger);
+    color: var(--white);
+    border-color: var(--ledger);
+  }
 
-.btn-ledger:hover {
-  background: var(--ledger-dark);
-  border-color: var(--ledger-dark);
-}
+  .btn-ledger:hover {
+    background: var(--ledger-dark);
+    border-color: var(--ledger-dark);
+  }
 
-.btn-ghost {
-  background: transparent;
-  color: var(--ink);
-  border-color: var(--line-strong);
-}
+  .btn-ghost {
+    background: transparent;
+    color: var(--ink);
+    border-color: var(--line-strong);
+  }
 
-.btn-ghost:hover {
-  border-color: var(--ink);
-  background: var(--paper-2);
-}
+  .btn-ghost:hover {
+    border-color: var(--ink);
+    background: var(--paper-2);
+  }
 
-.btn-sm {
-  padding: 8px 16px;
-  font-size: 13.5px;
+  .btn-sm {
+    padding: 8px 16px;
+    font-size: 13.5px;
+  }
 }
 
 /* Custom scrollbars & keyframes */

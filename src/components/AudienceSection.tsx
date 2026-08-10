@@ -24,7 +24,7 @@ export const AudienceSection: React.FC = () => {
         </motion.div>
 
         {/* Audience Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-[1px] bg-[#CFCDC0] border border-[#CFCDC0] rounded-[2px] overflow-hidden">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           
           {/* For Investors */}
           <motion.div 
@@ -32,7 +32,8 @@ export const AudienceSection: React.FC = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
-            className="bg-[#F7F7F2] p-[32px] sm:p-[42px] flex flex-col justify-between hover:bg-white transition-colors group"
+            whileHover={{ y: -6, transition: { duration: 0.25, ease: "easeOut" } }}
+            className="bg-[#F7F7F2] border border-[#CFCDC0] rounded-[4px] p-[32px] sm:p-[42px] flex flex-col justify-between hover:bg-white hover:border-[#2F5D50]/50 hover:shadow-xl transition-all duration-300 group cursor-pointer"
           >
             <div>
               <div className="flex justify-between items-center mb-4">
@@ -40,12 +41,12 @@ export const AudienceSection: React.FC = () => {
                   <TrendingUp className="w-4 h-4" />
                   For Investors & Funds
                 </span>
-                <span className="w-8 h-8 rounded-full bg-[#2F5D50]/10 flex items-center justify-center text-[#2F5D50] group-hover:bg-[#2F5D50] group-hover:text-white transition-colors">
-                  <ArrowUpRight className="w-4 h-4" />
+                <span className="w-8 h-8 rounded-full bg-[#2F5D50]/10 flex items-center justify-center text-[#2F5D50] group-hover:bg-[#2F5D50] group-hover:text-white group-hover:scale-105 transition-all duration-200">
+                  <ArrowUpRight className="w-4 h-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
                 </span>
               </div>
 
-              <h3 className="font-display text-[22px] sm:text-[25px] font-medium text-[#101C2B] mb-3.5 leading-snug">
+              <h3 className="font-display text-[22px] sm:text-[25px] font-medium text-[#101C2B] mb-3.5 leading-snug group-hover:text-[#2F5D50] transition-colors">
                 Institutional yields backed by short-term real economy trade.
               </h3>
               
@@ -54,7 +55,7 @@ export const AudienceSection: React.FC = () => {
               </p>
             </div>
 
-            <ul className="list-none pt-4 border-t border-[#CFCDC0] space-y-3 font-body">
+            <ul className="list-none pt-4 border-t border-[#CFCDC0]/80 space-y-3 font-body">
               <li className="flex gap-3 items-start text-[14px] text-[#3C4859]">
                 <Check className="w-4 h-4 text-[#2F5D50] shrink-0 mt-0.5" />
                 <span>Standardized 30, 60, and 90-day invoice shelf positions</span>
@@ -80,7 +81,8 @@ export const AudienceSection: React.FC = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.1 }}
-            className="bg-[#F7F7F2] p-[32px] sm:p-[42px] flex flex-col justify-between hover:bg-white transition-colors group"
+            whileHover={{ y: -6, transition: { duration: 0.25, ease: "easeOut" } }}
+            className="bg-[#F7F7F2] border border-[#CFCDC0] rounded-[4px] p-[32px] sm:p-[42px] flex flex-col justify-between hover:bg-white hover:border-[#2F5D50]/50 hover:shadow-xl transition-all duration-300 group cursor-pointer"
           >
             <div>
               <div className="flex justify-between items-center mb-4">
@@ -88,12 +90,12 @@ export const AudienceSection: React.FC = () => {
                   <Building2 className="w-4 h-4" />
                   For Lenders & Financing Partners
                 </span>
-                <span className="w-8 h-8 rounded-full bg-[#2F5D50]/10 flex items-center justify-center text-[#2F5D50] group-hover:bg-[#2F5D50] group-hover:text-white transition-colors">
-                  <ArrowUpRight className="w-4 h-4" />
+                <span className="w-8 h-8 rounded-full bg-[#2F5D50]/10 flex items-center justify-center text-[#2F5D50] group-hover:bg-[#2F5D50] group-hover:text-white group-hover:scale-105 transition-all duration-200">
+                  <ArrowUpRight className="w-4 h-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
                 </span>
               </div>
 
-              <h3 className="font-display text-[22px] sm:text-[25px] font-medium text-[#101C2B] mb-3.5 leading-snug">
+              <h3 className="font-display text-[22px] sm:text-[25px] font-medium text-[#101C2B] mb-3.5 leading-snug group-hover:text-[#2F5D50] transition-colors">
                 Scale your loan book with automated syndication.
               </h3>
               
@@ -102,7 +104,7 @@ export const AudienceSection: React.FC = () => {
               </p>
             </div>
 
-            <ul className="list-none pt-4 border-t border-[#CFCDC0] space-y-3 font-body">
+            <ul className="list-none pt-4 border-t border-[#CFCDC0]/80 space-y-3 font-body">
               <li className="flex gap-3 items-start text-[14px] text-[#3C4859]">
                 <Check className="w-4 h-4 text-[#2F5D50] shrink-0 mt-0.5" />
                 <span>Real-time tracking of share sales and syndication progress</span>
