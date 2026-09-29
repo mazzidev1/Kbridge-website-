@@ -1,28 +1,28 @@
 @import "tailwindcss";
 
 @theme {
-  --font-serif: 'Source Serif 4', Georgia, serif;
-  --font-sans: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, sans-serif;
-  --font-mono: 'IBM Plex Mono', monospace;
-  --font-display: 'Source Serif 4', Georgia, serif;
-  --font-body: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-serif: 'Poppins', 'Source Serif 4', Georgia, serif;
+  --font-sans: 'Poppins', 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: 'Poppins', 'IBM Plex Mono', monospace;
+  --font-display: 'Poppins', 'Source Serif 4', Georgia, serif;
+  --font-body: 'Poppins', 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
 :root {
-  --ink: #101C2B;
-  --ink-soft: #3C4859;
+  --ink: #0C1D30;
+  --ink-soft: #30455C;
   --paper: #EEEEE6;
   --paper-2: #F7F7F2;
   --line: #CFCDC0;
   --line-strong: #B9B6A6;
-  --ledger: #2F5D50;
-  --ledger-dark: #1E3D34;
-  --brass: #9C7B2E;
-  --brass-light: #E8DEC4;
+  --ledger: #EAA53A;
+  --ledger-dark: #D49025;
+  --brass: #EAA53A;
+  --brass-light: #FBEBD2;
   --white: #FFFFFF;
-  --font-display: 'Source Serif 4', Georgia, serif;
-  --font-body: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, sans-serif;
-  --font-mono: 'IBM Plex Mono', monospace;
+  --font-display: 'Poppins', 'Source Serif 4', Georgia, serif;
+  --font-body: 'Poppins', 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: 'Poppins', 'IBM Plex Mono', monospace;
 }
 
 body {
@@ -65,35 +65,37 @@ body {
   }
 
   .btn-primary {
-    background: var(--ink);
+    background: #0C1D30;
     color: var(--paper-2);
-    border-color: var(--ink);
+    border-color: #0C1D30;
   }
 
   .btn-primary:hover {
-    background: var(--ledger-dark);
-    border-color: var(--ledger-dark);
+    background: #EAA53A;
+    color: #0C1D30;
+    border-color: #EAA53A;
   }
 
   .btn-ledger {
-    background: var(--ledger);
-    color: var(--white);
-    border-color: var(--ledger);
+    background: #EAA53A;
+    color: #0C1D30;
+    font-weight: 600;
+    border-color: #EAA53A;
   }
 
   .btn-ledger:hover {
-    background: var(--ledger-dark);
-    border-color: var(--ledger-dark);
+    background: #D49025;
+    border-color: #D49025;
   }
 
   .btn-ghost {
     background: transparent;
-    color: var(--ink);
+    color: #0C1D30;
     border-color: var(--line-strong);
   }
 
   .btn-ghost:hover {
-    border-color: var(--ink);
+    border-color: #0C1D30;
     background: var(--paper-2);
   }
 

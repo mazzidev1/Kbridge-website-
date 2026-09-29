@@ -39,28 +39,28 @@ export const WaitlistSection: React.FC<WaitlistSectionProps> = ({ onOpenDemo, on
         >
           {/* Left CTA */}
           <div>
-            <div className="font-body font-semibold text-[12px] tracking-wider uppercase text-[#2F5D50] mb-3 flex items-center gap-2.5">
-              <span className="w-5.5 h-[1px] bg-[#2F5D50]"></span>
-              Ready to get started?
+            <div className="font-body font-semibold text-[12px] tracking-wider uppercase text-[#0C1D30] mb-3 flex items-center gap-2.5">
+              <span className="w-4 h-[1px] bg-[#EAA53A]"></span>
+              Built on Hedera • Private Credit &amp; USDC Liquidity
             </div>
             
-            <h2 id="demo" className="font-display font-medium text-[28px] sm:text-[36px] tracking-tight text-[#101C2B] leading-tight mb-3.5">
+            <h2 id="demo" className="font-display font-medium text-[28px] sm:text-[36px] tracking-tight text-[#0C1D30] leading-tight mb-3.5">
               Experience the future of trade receivable liquidity.
             </h2>
             
-            <p className="text-[15.5px] text-[#3C4859] max-w-[440px] leading-relaxed font-body">
-              Whether you are an institution looking to deploy capital or a supplier seeking instant working capital against unpaid invoices, kbridge provides a secure, audited portal.
+            <p className="text-[15.5px] text-[#30455C] max-w-[460px] leading-relaxed font-body">
+              Kbridge connects institutional stablecoin capital with verified trade receivables through tokenized investment pools on Hedera. 100% denominated and settled in USDC with no fiat delays.
             </p>
 
-            <div className="mt-4 pt-4 border-t border-[#CFCDC0]/60 flex items-center gap-2 text-[13.5px] font-body text-[#2F5D50]">
-              <Mail className="w-4 h-4 shrink-0" />
-              <span>Inquiries: <a href="mailto:contact@kundabox.com" className="underline font-semibold hover:text-[#101C2B]">contact@kundabox.com</a></span>
+            <div className="mt-4 pt-4 border-t border-[#CFCDC0]/60 flex items-center gap-2 text-[13.5px] font-body text-[#0C1D30]">
+              <Mail className="w-4 h-4 shrink-0 text-[#EAA53A]" />
+              <span>Inquiries: <a href="mailto:contact@kundabox.com" className="underline font-semibold hover:text-[#EAA53A]">contact@kundabox.com</a></span>
             </div>
             
             <div className="mt-6 flex flex-wrap gap-3.5 items-center">
               <button
                 onClick={onOpenDemo}
-                className="btn btn-primary bg-[#101C2B] text-white hover:bg-[#2F5D50] flex items-center gap-2 cursor-pointer transition-colors w-full sm:w-auto"
+                className="btn btn-primary bg-[#0C1D30] text-white hover:bg-[#EAA53A] hover:text-[#0C1D30] flex items-center gap-2 cursor-pointer transition-colors w-full sm:w-auto shadow-xs"
               >
                 Book a demo
                 <ArrowRight className="w-4 h-4" />
@@ -68,7 +68,7 @@ export const WaitlistSection: React.FC<WaitlistSectionProps> = ({ onOpenDemo, on
 
               <button
                 onClick={handleScrollToWaitlist}
-                className="btn btn-ghost border border-[#CFCDC0] hover:border-[#101C2B] text-[#101C2B] cursor-pointer w-full sm:w-auto"
+                className="btn btn-ghost border border-[#CFCDC0] hover:border-[#0C1D30] text-[#0C1D30] cursor-pointer w-full sm:w-auto"
               >
                 Join waitlist
               </button>
@@ -77,7 +77,7 @@ export const WaitlistSection: React.FC<WaitlistSectionProps> = ({ onOpenDemo, on
 
           {/* Right Inline Waitlist Form */}
           <form id="waitlist" onSubmit={handleWaitlistSubmit} className="flex flex-col gap-3.5 bg-white p-5 sm:p-7 border border-[#CFCDC0] rounded-[2px] shadow-xs">
-            <span className="font-body font-semibold text-[12px] uppercase tracking-wide text-[#3C4859]">
+            <span className="font-body font-semibold text-[12px] uppercase tracking-wide text-[#30455C]">
               Join the priority access network
             </span>
             
@@ -88,7 +88,7 @@ export const WaitlistSection: React.FC<WaitlistSectionProps> = ({ onOpenDemo, on
                 placeholder="Full name"
                 value={wlName}
                 onChange={(e) => setWlName(e.target.value)}
-                className="w-full border border-[#B9B6A6] bg-[#F7F7F2] p-3 text-[14.5px] rounded-[2px] text-[#101C2B] focus:outline-none focus:border-[#2F5D50] font-body"
+                className="w-full border border-[#B9B6A6] bg-[#F7F7F2] p-3 text-[14.5px] rounded-[2px] text-[#0C1D30] focus:outline-none focus:border-[#EAA53A] font-body"
               />
             </div>
             
@@ -100,13 +100,13 @@ export const WaitlistSection: React.FC<WaitlistSectionProps> = ({ onOpenDemo, on
                 placeholder="Work email *"
                 value={wlEmail}
                 onChange={(e) => setWlEmail(e.target.value)}
-                className="w-full border border-[#B9B6A6] bg-[#F7F7F2] p-3 text-[14.5px] rounded-[2px] text-[#101C2B] focus:outline-none focus:border-[#2F5D50] font-body"
+                className="w-full border border-[#B9B6A6] bg-[#F7F7F2] p-3 text-[14.5px] rounded-[2px] text-[#0C1D30] focus:outline-none focus:border-[#EAA53A] font-body"
               />
             </div>
 
             <button
               type="submit"
-              className={`btn ${wlConfirmed ? 'bg-[#2F5D50] text-white' : 'bg-[#101C2B] text-white hover:bg-[#2F5D50]'} w-full transition-colors font-medium cursor-pointer py-3 text-[14.5px]`}
+              className={`btn ${wlConfirmed ? 'bg-[#EAA53A] text-[#0C1D30]' : 'bg-[#0C1D30] text-white hover:bg-[#EAA53A] hover:text-[#0C1D30]'} w-full transition-colors font-medium cursor-pointer py-3 text-[14.5px] shadow-xs`}
             >
               {wlConfirmed ? 'Added to waitlist ✓' : 'Join the waitlist'}
             </button>
@@ -115,9 +115,9 @@ export const WaitlistSection: React.FC<WaitlistSectionProps> = ({ onOpenDemo, on
               <motion.div 
                 initial={{ opacity: 0, y: 5 }}
                 animate={{ opacity: 1, y: 0 }}
-                className="text-[12.5px] text-[#2F5D50] font-body mt-1 flex items-center gap-1.5 font-medium"
+                className="text-[12.5px] text-[#0C1D30] font-body mt-1 flex items-center gap-1.5 font-medium"
               >
-                <CheckCircle2 className="w-4 h-4 shrink-0" />
+                <CheckCircle2 className="w-4 h-4 shrink-0 text-[#EAA53A]" />
                 <span>You're on the list — we'll reach out before general access opens.</span>
               </motion.div>
             )}

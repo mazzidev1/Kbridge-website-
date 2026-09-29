@@ -1,10 +1,9 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { CheckCircle2, ArrowRight, ShieldCheck, Sparkles } from 'lucide-react';
+import { ArrowRight, CheckCircle2 } from 'lucide-react';
 import { VaultGlyph, LedgerWalletGlyph, RWATokenGlyph } from './AnimatedGlyphs';
-import founderImgAsset from '../assets/images/hero_founder_portrait_1786354465043.jpg';
-
-const founderImg = founderImgAsset || '/assets/images/hero_founder_portrait_1786354465043.jpg';
+import { CpuKbridgeIcon } from './CpuKbridgeIcon';
+import founderImage from '../assets/images/founders_visible_faces_1790669395769.jpg';
 
 interface HeroProps {
   onOpenDemo: () => void;
@@ -18,11 +17,12 @@ export const Hero: React.FC<HeroProps> = ({
   const [activeTab, setActiveTab] = useState<'construction' | 'logistics' | 'manufacturing'>('construction');
   const [isPaid, setIsPaid] = useState(false);
   const [activeBadge, setActiveBadge] = useState<'lock' | 'wallet' | 'dollar'>('dollar');
+  const [imageError, setImageError] = useState(false);
 
   const invoiceTypes = {
-    construction: { label: 'Construction', amount: '$85,000', terms: '20 days', advanceRate: '90%' },
-    logistics: { label: 'Logistics', amount: '$140,000', terms: '30 days', advanceRate: '88%' },
-    manufacturing: { label: 'Export Goods', amount: '$210,000', terms: '45 days', advanceRate: '92%' },
+    construction: { label: 'Construction', amount: '85,000 USDC', terms: '20 days', advanceRate: '90%' },
+    logistics: { label: 'Logistics', amount: '140,000 USDC', terms: '30 days', advanceRate: '88%' },
+    manufacturing: { label: 'Export Goods', amount: '210,000 USDC', terms: '45 days', advanceRate: '92%' },
   };
 
   const currentInvoice = invoiceTypes[activeTab];
@@ -35,27 +35,30 @@ export const Hero: React.FC<HeroProps> = ({
   };
 
   return (
-    <section className="py-16 md:py-24 border-b border-[#CFCDC0] relative overflow-hidden bg-[#EEEEE6]">
-      {/* Background ambient lighting */}
-      <div className="absolute top-0 right-1/4 w-96 h-96 bg-[#2F5D50]/5 rounded-full blur-3xl pointer-events-none" />
+    <section className="relative overflow-hidden pt-12 pb-36 sm:pt-20 sm:pb-48 lg:pb-56 border-b border-[#CFCDC0]">
+      {/* Background Subtle Ambient Glow */}
+      <div className="absolute top-0 right-1/4 w-96 h-96 bg-[#EAA53A]/10 rounded-full blur-3xl pointer-events-none" />
 
-      <div className="max-w-[1280px] mx-auto px-5 sm:px-8 grid grid-cols-1 lg:grid-cols-[0.9fr_1.1fr] gap-10 lg:gap-14 items-center">
-        {/* Left Copy */}
+      <div className="max-w-[1120px] mx-auto px-5 sm:px-8 grid grid-cols-1 lg:grid-cols-[1.05fr_0.95fr] gap-12 sm:gap-14 items-center">
+        
+        {/* Left Column: Heading and CTAs */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
         >
-          <div className="font-body font-semibold text-[12px] tracking-wider uppercase text-[#2F5D50] mb-5 flex items-center gap-2.5">
-            Instant invoice liquidity, verified on-chain
+          <div className="font-body font-semibold text-[12px] tracking-wider uppercase text-[#0C1D30] mb-5 flex items-center gap-2">
+            <span>The bridge for private credit &amp; stablecoin liquidity</span>
+            <span className="text-[#30455C]">•</span>
+            <span className="text-[#EAA53A] font-medium">Built on Hedera</span>
           </div>
           
-          <h1 className="font-display font-medium text-[38px] sm:text-[48px] lg:text-[54px] leading-[1.08] tracking-tight text-[#101C2B] max-w-[560px]">
+          <h1 className="font-display font-medium text-[38px] sm:text-[48px] lg:text-[54px] leading-[1.08] tracking-tight text-[#0C1D30] max-w-[560px]">
             Turn unpaid invoices into immediate working capital.
           </h1>
           
-          <p className="font-body text-[17.5px] text-[#3C4859] max-w-[500px] my-6 leading-[1.65]">
-            kbridge connects business owners and financing partners to transparent institutional liquidity. Advance up to 90% of your receivables in 24 hours without debt or dilution.
+          <p className="font-body text-[17px] text-[#30455C] max-w-[520px] my-6 leading-[1.65]">
+            Kbridge connects institutional stablecoin capital with verified trade receivables through tokenized investment pools on the Hedera network. Advance up to 90% of your receivables in 24 hours in USDC without debt or dilution.
           </p>
           
           <div className="flex flex-wrap items-center gap-3.5 mb-8">
@@ -69,132 +72,156 @@ export const Hero: React.FC<HeroProps> = ({
             
             <button
               onClick={onOpenWaitlist}
-              className="btn btn-ghost hover:bg-[#101C2B]/5 transition-colors cursor-pointer border border-[#CFCDC0]"
+              className="btn btn-ghost hover:bg-[#0C1D30]/5 transition-colors cursor-pointer border border-[#CFCDC0]"
             >
               Join waitlist
             </button>
           </div>
 
-          <div className="font-body text-[13px] text-[#3C4859] flex items-center gap-2.5 font-medium pt-2 border-t border-[#CFCDC0]/60 max-w-[480px]">
-            Non-recourse options • Bank-grade compliance • Institutional investors
+          <div className="font-body text-[13px] text-[#30455C] flex flex-wrap items-center gap-2 font-medium pt-2 border-t border-[#CFCDC0]/60 max-w-[520px]">
+            <span>100% USDC Settlement</span>
+            <span>•</span>
+            <span>Marked to pool performance</span>
+            <span>•</span>
+            <span className="text-[#0C1D30] font-semibold">Hedera Network</span>
           </div>
         </motion.div>
 
         {/* Right Hero Illustration with Founder Image and Overlay Floating Invoice Card */}
         <motion.div
-          initial={{ opacity: 0, scale: 0.96, y: 25 }}
-          animate={{ opacity: 1, scale: 1, y: 0 }}
+          initial={{ opacity: 0, scale: 0.95 }}
+          animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.7, delay: 0.15, ease: [0.16, 1, 0.3, 1] }}
-          className="relative max-w-none w-full"
+          className="relative flex justify-center lg:justify-end"
         >
-          {/* Main Card Frame - Taller & Wider to show more of smiling founder */}
-          <div className="relative rounded-[8px] overflow-hidden shadow-2xl border border-[#101C2B]/10 bg-[#101C2B] h-[520px] sm:h-[580px] lg:h-[620px] flex items-end">
-            {/* Background Founder Photo with framing optimized for smiling face */}
-            <img
-              src={founderImg}
-              alt="Business founder smiling"
-              referrerPolicy="no-referrer"
-              className="absolute inset-0 w-full h-full object-cover object-[center_15%] opacity-95 filter contrast-[1.02]"
-            />
+          {/* Main Visual Frame with Realistic Founder & Working Environment */}
+          <div className="relative w-full max-w-[500px] aspect-[4/3.6] rounded-[4px] border border-[#CFCDC0] shadow-xl overflow-hidden bg-[#E2E1D7] group">
+            {!imageError ? (
+              <img 
+                src={founderImage} 
+                alt="Trade supplier founders in a modern export logistics operations office" 
+                onError={() => setImageError(true)}
+                className="w-full h-full object-cover object-[center_12%] filter grayscale-[8%] contrast-[104%] group-hover:scale-[1.02] transition-transform duration-700"
+              />
+            ) : (
+              <div className="w-full h-full bg-gradient-to-br from-[#101C2B] via-[#0C1D30] to-[#182C44] flex flex-col items-center justify-center p-8 text-center">
+                <div className="w-16 h-16 rounded-[8px] bg-[#EAA53A]/20 border border-[#EAA53A]/40 flex items-center justify-center mb-4">
+                  <CpuKbridgeIcon className="w-10 h-10" />
+                </div>
+                <span className="font-display text-[20px] text-white font-medium">Hedera Tokenized Receivables</span>
+                <span className="text-[12.5px] font-mono text-[#EAA53A] mt-1.5">100% USDC Liquidity Engine</span>
+              </div>
+            )}
             
-            {/* Soft Subtle Gradient Overlay that preserves brightness on her face */}
-            <div className="absolute inset-0 bg-gradient-to-t from-[#101C2B]/80 via-[#101C2B]/10 to-transparent" />
+            {/* Subtle Gradient Vignette restricted to bottom 25% only */}
+            <div className="absolute bottom-0 left-0 right-0 h-28 bg-gradient-to-t from-[#0C1D30]/65 via-[#0C1D30]/15 to-transparent pointer-events-none" />
 
-            {/* Floating Interactive Elements Group */}
-            <div className="relative z-20 w-full p-3.5 sm:p-6 lg:p-7 flex items-end gap-2.5 sm:gap-4">
+            {/* Micro Badge for Context on Photo - top right corner, no dot */}
+            <div className="absolute top-3 right-3 text-white/90 text-[11px] font-mono pointer-events-none z-20 flex items-center">
+              <span className="bg-[#0C1D30]/80 px-2.5 py-1 rounded-[2px] backdrop-blur-xs border border-white/10 text-white font-mono text-[11px]">
+                Verified Trade Originator • Hedera
+              </span>
+            </div>
+
+            {/* Interactive Feature Glyphs Overlay on Top of Hero Image */}
+            <div className="absolute top-3 left-3 z-20 flex items-center gap-1.5">
               
-              {/* Stacked Icon Badge Column (Left Side) - Animated Custom Vector Glyphs with Random Bounce/Shake */}
-              <div className="flex flex-col gap-2.5 sm:gap-3 shrink-0">
-                {/* Vault Security Glyph Button */}
-                <motion.button
-                  animate={{
-                    y: [0, -7, 1, -5, 0],
-                    rotate: [0, -5, 6, -3, 0],
-                  }}
-                  transition={{
-                    duration: 3.2,
-                    repeat: Infinity,
-                    repeatType: "reverse",
-                    ease: "easeInOut",
-                    delay: 0.1,
-                  }}
-                  whileHover={{ scale: 1.15, rotate: 0 }}
-                  whileTap={{ scale: 0.95 }}
+              {/* Vault Glyph Button */}
+              <div className="relative group/tooltip">
+                <button
+                  type="button"
                   onClick={() => setActiveBadge('lock')}
-                  className={`w-10 h-10 sm:w-14 sm:h-14 bg-white shadow-2xl flex items-center justify-center rounded-[6px] border cursor-pointer transition-all p-2 sm:p-2.5 ${
-                    activeBadge === 'lock' ? 'border-[#2F5D50] ring-2 ring-[#2F5D50]/30 scale-105 bg-white' : 'border-gray-200'
+                  aria-label="Toggle Vault Security Specification"
+                  title="Audited Smart Contract Vault"
+                  className={`w-9 h-9 sm:w-11 sm:h-11 bg-white shadow-2xl flex items-center justify-center rounded-[6px] border cursor-pointer transition-all p-1.5 sm:p-2 ${
+                    activeBadge === 'lock' ? 'border-[#EAA53A] ring-2 ring-[#EAA53A]/40 scale-105 bg-white' : 'border-gray-200'
                   }`}
-                  title="Audited Vault Smart Contract"
                 >
-                  <VaultGlyph active={activeBadge === 'lock'} className="w-full h-full text-[#2F5D50]" />
-                </motion.button>
-
-                {/* Ledger Settlement Glyph Button */}
-                <motion.button
-                  animate={{
-                    y: [0, -8, 2, -4, 0],
-                    rotate: [0, 6, -5, 4, 0],
-                  }}
-                  transition={{
-                    duration: 2.7,
-                    repeat: Infinity,
-                    repeatType: "reverse",
-                    ease: "easeInOut",
-                    delay: 0.8,
-                  }}
-                  whileHover={{ scale: 1.15, rotate: 0 }}
-                  whileTap={{ scale: 0.95 }}
-                  onClick={() => setActiveBadge('wallet')}
-                  className={`w-10 h-10 sm:w-14 sm:h-14 bg-white shadow-2xl flex items-center justify-center rounded-[6px] border cursor-pointer transition-all p-2 sm:p-2.5 ${
-                    activeBadge === 'wallet' ? 'border-[#2F5D50] ring-2 ring-[#2F5D50]/30 scale-105 bg-white' : 'border-gray-200'
-                  }`}
-                  title="Instant Ledger Settlement"
-                >
-                  <LedgerWalletGlyph active={activeBadge === 'wallet'} className="w-full h-full text-[#2F5D50]" />
-                </motion.button>
-
-                {/* RWA Token Capital Glyph Button */}
-                <motion.button
-                  animate={{
-                    y: [0, -6, 2, -6, 0],
-                    rotate: [0, -4, 5, -2, 0],
-                  }}
-                  transition={{
-                    duration: 3.5,
-                    repeat: Infinity,
-                    repeatType: "reverse",
-                    ease: "easeInOut",
-                    delay: 1.5,
-                  }}
-                  whileHover={{ scale: 1.15, rotate: 0 }}
-                  whileTap={{ scale: 0.95 }}
-                  onClick={() => setActiveBadge('dollar')}
-                  className={`w-10 h-10 sm:w-14 sm:h-14 bg-white shadow-2xl flex items-center justify-center rounded-[6px] border cursor-pointer transition-all p-2 sm:p-2.5 ${
-                    activeBadge === 'dollar' ? 'border-[#2F5D50] ring-2 ring-[#2F5D50]/30 scale-105 bg-white' : 'border-gray-200'
-                  }`}
-                  title="Tokenized RWA Working Capital"
-                >
-                  <RWATokenGlyph active={activeBadge === 'dollar'} className="w-full h-full text-[#2F5D50]" />
-                </motion.button>
+                  <VaultGlyph active={activeBadge === 'lock'} className="w-full h-full text-[#0C1D30]" />
+                </button>
+                <div className="absolute left-0 top-full mt-1.5 hidden group-hover/tooltip:block bg-[#0C1D30] text-white text-[11px] font-mono py-1 px-2 rounded whitespace-nowrap z-30 shadow-lg">
+                  Audited Hedera Vault
+                </div>
               </div>
 
-              {/* White Invoice Card (Right Side) */}
-              <motion.div 
-                layout
-                className="flex-grow bg-white/98 backdrop-blur-xs rounded-[4px] p-4 sm:p-6 shadow-2xl border border-gray-100 text-[#101C2B] font-body min-h-[200px] sm:min-h-[210px] flex flex-col justify-between max-w-[380px]"
-              >
+              {/* Ledger Wallet Glyph Button */}
+              <div className="relative group/tooltip">
+                <button
+                  type="button"
+                  onClick={() => setActiveBadge('wallet')}
+                  aria-label="Toggle Ledger Wallet Verification"
+                  title="Immutable Hedera Ledger"
+                  className={`w-9 h-9 sm:w-11 sm:h-11 bg-white shadow-2xl flex items-center justify-center rounded-[6px] border cursor-pointer transition-all p-1.5 sm:p-2 ${
+                    activeBadge === 'wallet' ? 'border-[#EAA53A] ring-2 ring-[#EAA53A]/40 scale-105 bg-white' : 'border-gray-200'
+                  }`}
+                >
+                  <LedgerWalletGlyph active={activeBadge === 'wallet'} className="w-full h-full text-[#0C1D30]" />
+                </button>
+                <div className="absolute left-0 top-full mt-1.5 hidden group-hover/tooltip:block bg-[#0C1D30] text-white text-[11px] font-mono py-1 px-2 rounded whitespace-nowrap z-30 shadow-lg">
+                  Hedera Consensus (HCS)
+                </div>
+              </div>
+
+              {/* RWA Token Capital Glyph Button */}
+              <div className="relative group/tooltip">
+                <button
+                  type="button"
+                  onClick={() => setActiveBadge('dollar')}
+                  aria-label="Toggle Tokenized RWA Working Capital"
+                  title="Tokenized RWA Working Capital"
+                  className={`w-9 h-9 sm:w-11 sm:h-11 bg-white shadow-2xl flex items-center justify-center rounded-[6px] border cursor-pointer transition-all p-1.5 sm:p-2 ${
+                    activeBadge === 'dollar' ? 'border-[#EAA53A] ring-2 ring-[#EAA53A]/40 scale-105 bg-white' : 'border-gray-200'
+                  }`}
+                >
+                  <RWATokenGlyph active={activeBadge === 'dollar'} className="w-full h-full text-[#0C1D30]" />
+                </button>
+                <div className="absolute left-0 top-full mt-1.5 hidden group-hover/tooltip:block bg-[#0C1D30] text-white text-[11px] font-mono py-1 px-2 rounded whitespace-nowrap z-30 shadow-lg">
+                  USDC Receivable Pools
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          {/* Floating Interactive Live Invoice Payout Card - Shifted down to fully reveal faces */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.35 }}
+            className="absolute -bottom-28 sm:-bottom-36 md:-bottom-40 lg:-bottom-48 right-1 sm:-right-4 lg:-right-6 w-[285px] sm:w-[325px] bg-white border border-[#CFCDC0] rounded-[4px] shadow-2xl p-4 sm:p-4.5 z-20 font-body"
+          >
+            <div>
+              {/* Tab Selector for Quick Industry Mockup */}
+              <div className="flex border-b border-gray-100 pb-2.5 mb-3 gap-1.5">
+                {(['construction', 'logistics', 'manufacturing'] as const).map((key) => (
+                  <button
+                    key={key}
+                    onClick={() => { setActiveTab(key); setIsPaid(false); }}
+                    className={`text-[11px] font-mono px-2 py-1 rounded-[2px] transition-colors cursor-pointer capitalize ${
+                      activeTab === key
+                        ? 'bg-[#0C1D30] text-white font-medium'
+                        : 'text-gray-500 hover:text-black hover:bg-gray-100'
+                    }`}
+                  >
+                    {key}
+                  </button>
+                ))}
+              </div>
+
+              <div>
+                {/* Main Card Content */}
                 <div>
-                  <div className="flex justify-between items-start mb-3">
+                  <div className="flex justify-between items-start">
                     <div>
-                      <h3 className="font-display font-medium text-[22px] sm:text-[24px] text-[#101C2B] leading-none mb-1">
+                      <h3 className="font-display font-medium text-[22px] sm:text-[24px] text-[#0C1D30] leading-none mb-1">
                         Invoice
                       </h3>
                       <p className="font-mono text-[11px] text-gray-500 uppercase">
-                        #INV-{activeTab}-2026
+                        #INV-{activeTab}-2026 • Hedera
                       </p>
                     </div>
 
-                    <span className="bg-[#2F5D50]/10 text-[#2F5D50] font-mono text-[11px] font-semibold px-2.5 py-1 rounded-[2px]">
+                    <span className="bg-[#EAA53A]/15 text-[#0C1D30] font-mono text-[11px] font-semibold px-2.5 py-1 rounded-[2px] border border-[#EAA53A]/30">
                       {currentInvoice.amount}
                     </span>
                   </div>
@@ -203,7 +230,7 @@ export const Hero: React.FC<HeroProps> = ({
                   <div className="space-y-2.5 my-4 pt-3 border-t border-gray-100">
                     <div className="flex justify-between items-center text-[13px]">
                       <div className="flex items-center gap-2">
-                        <span className="w-16 h-3 bg-gray-200 rounded-full inline-block" />
+                        <span className="w-16 h-3 bg-[#EAA53A]/30 rounded-full inline-block" />
                         <span className="font-medium text-gray-700">{currentInvoice.label}</span>
                       </div>
                       <span className="font-mono text-[12px] text-gray-500">Advance {currentInvoice.advanceRate}</span>
@@ -211,7 +238,12 @@ export const Hero: React.FC<HeroProps> = ({
 
                     <div className="flex justify-between items-center text-[13px]">
                       <span className="text-gray-500">Payment Terms</span>
-                      <span className="font-medium text-[#101C2B] font-mono">{currentInvoice.terms}</span>
+                      <span className="font-medium text-[#0C1D30] font-mono">{currentInvoice.terms}</span>
+                    </div>
+
+                    <div className="flex justify-between items-center text-[11.5px] font-mono text-[#30455C] pt-1">
+                      <span>Network / Asset</span>
+                      <span className="text-[#0C1D30] font-semibold">Hedera • USDC</span>
                     </div>
                   </div>
                 </div>
@@ -224,10 +256,10 @@ export const Hero: React.FC<HeroProps> = ({
                       initial={{ opacity: 0, scale: 0.95 }}
                       animate={{ opacity: 1, scale: 1 }}
                       exit={{ opacity: 0, scale: 0.95 }}
-                      className="bg-[#2F5D50] text-white p-3 rounded-[3px] text-center font-medium text-[13.5px] flex items-center justify-center gap-2 shadow-inner"
+                      className="bg-[#0C1D30] text-white p-3 rounded-[3px] text-center font-medium text-[13.5px] flex items-center justify-center gap-2 shadow-inner border border-[#EAA53A]/40"
                     >
-                      <CheckCircle2 className="w-4 h-4 text-emerald-300 animate-bounce" />
-                      Payout Sent • Funds in Account
+                      <CheckCircle2 className="w-4 h-4 text-[#EAA53A] animate-bounce" />
+                      Payout Sent in USDC on Hedera
                     </motion.div>
                   ) : (
                     <motion.button
@@ -238,19 +270,19 @@ export const Hero: React.FC<HeroProps> = ({
                       whileHover={{ scale: 1.01 }}
                       whileTap={{ scale: 0.98 }}
                       onClick={handleGetPaidClick}
-                      className="w-full bg-[#2F5D50] hover:bg-[#23473D] text-[#F7F7F2] font-medium py-3 rounded-[3px] text-[14.5px] transition-colors shadow-md flex items-center justify-center gap-2 cursor-pointer group"
+                      className="w-full bg-[#0C1D30] hover:bg-[#EAA53A] hover:text-[#0C1D30] text-[#F7F7F2] font-medium py-3 rounded-[3px] text-[14.5px] transition-colors shadow-md flex items-center justify-center gap-2 cursor-pointer group"
                     >
-                      <span>Get Paid</span>
-                      <Sparkles className="w-4 h-4 text-amber-300 group-hover:rotate-12 transition-transform" />
+                      <span>Get Instant Payout in USDC</span>
+                      <ArrowRight className="w-4 h-4 text-[#EAA53A] group-hover:text-[#0C1D30] group-hover:translate-x-0.5 transition-all" />
                     </motion.button>
                   )}
                 </AnimatePresence>
-              </motion.div>
+              </div>
             </div>
-          </div>
+          </motion.div>
         </motion.div>
+
       </div>
     </section>
   );
 };
-

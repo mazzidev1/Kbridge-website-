@@ -10,7 +10,7 @@ interface GlyphProps {
 /**
  * Animated Vault / Security Glyph
  */
-export const VaultGlyph: React.FC<GlyphProps> = ({ className = "text-[#2F5D50]", active = false }) => {
+export const VaultGlyph: React.FC<GlyphProps> = ({ className = "text-[#0C1D30]", active = false }) => {
   return (
     <div className={`relative flex items-center justify-center ${className}`}>
       <svg viewBox="0 0 32 32" fill="none" className="w-full h-full">
@@ -64,7 +64,7 @@ export const VaultGlyph: React.FC<GlyphProps> = ({ className = "text-[#2F5D50]",
 /**
  * Animated Wallet / Ledger Settlement Glyph
  */
-export const LedgerWalletGlyph: React.FC<GlyphProps> = ({ className = "text-[#2F5D50]", active = false }) => {
+export const LedgerWalletGlyph: React.FC<GlyphProps> = ({ className = "text-[#0C1D30]", active = false }) => {
   return (
     <div className={`relative flex items-center justify-center ${className}`}>
       <svg viewBox="0 0 32 32" fill="none" className="w-full h-full">
@@ -133,7 +133,7 @@ export const LedgerWalletGlyph: React.FC<GlyphProps> = ({ className = "text-[#2F
 /**
  * Animated RWA Token / Capital Glyph
  */
-export const RWATokenGlyph: React.FC<GlyphProps> = ({ className = "text-[#2F5D50]", active = false }) => {
+export const RWATokenGlyph: React.FC<GlyphProps> = ({ className = "text-[#0C1D30]", active = false }) => {
   return (
     <div className={`relative flex items-center justify-center ${className}`}>
       <svg viewBox="0 0 32 32" fill="none" className="w-full h-full">
@@ -176,7 +176,7 @@ export const RWATokenGlyph: React.FC<GlyphProps> = ({ className = "text-[#2F5D50
 /**
  * Animated Lightning Liquidity Glyph
  */
-export const LightningGlyph: React.FC<GlyphProps> = ({ className = "text-[#2F5D50]" }) => {
+export const LightningGlyph: React.FC<GlyphProps> = ({ className = "text-[#0C1D30]" }) => {
   return (
     <div className={`relative flex items-center justify-center ${className}`}>
       <svg viewBox="0 0 24 24" fill="none" className="w-full h-full">
@@ -205,7 +205,7 @@ export const LightningGlyph: React.FC<GlyphProps> = ({ className = "text-[#2F5D5
 /**
  * Animated Shield Check Glyph
  */
-export const AuditShieldGlyph: React.FC<GlyphProps> = ({ className = "text-[#2F5D50]" }) => {
+export const AuditShieldGlyph: React.FC<GlyphProps> = ({ className = "text-[#0C1D30]" }) => {
   return (
     <div className={`relative flex items-center justify-center ${className}`}>
       <svg viewBox="0 0 24 24" fill="none" className="w-full h-full">
@@ -234,7 +234,7 @@ export const AuditShieldGlyph: React.FC<GlyphProps> = ({ className = "text-[#2F5
 /**
  * Animated Notification Bell Glyph
  */
-export const NotificationBellGlyph: React.FC<GlyphProps> = ({ className = "text-[#2F5D50]" }) => {
+export const NotificationBellGlyph: React.FC<GlyphProps> = ({ className = "text-[#0C1D30]" }) => {
   return (
     <div className={`relative flex items-center justify-center ${className}`}>
       <svg viewBox="0 0 24 24" fill="none" className="w-full h-full">
@@ -262,7 +262,7 @@ export const NotificationBellGlyph: React.FC<GlyphProps> = ({ className = "text-
 /**
  * Animated Document Report Glyph
  */
-export const DocumentReportGlyph: React.FC<GlyphProps> = ({ className = "text-[#2F5D50]" }) => {
+export const DocumentReportGlyph: React.FC<GlyphProps> = ({ className = "text-[#0C1D30]" }) => {
   return (
     <div className={`relative flex items-center justify-center ${className}`}>
       <svg viewBox="0 0 24 24" fill="none" className="w-full h-full">
@@ -299,7 +299,7 @@ export const DocumentReportGlyph: React.FC<GlyphProps> = ({ className = "text-[#
 /**
  * Animated On-Chain Database Glyph
  */
-export const OnChainDatabaseGlyph: React.FC<GlyphProps> = ({ className = "text-[#2F5D50]" }) => {
+export const OnChainDatabaseGlyph: React.FC<GlyphProps> = ({ className = "text-[#0C1D30]" }) => {
   return (
     <div className={`relative flex items-center justify-center ${className}`}>
       <svg viewBox="0 0 24 24" fill="none" className="w-full h-full">
@@ -320,7 +320,7 @@ export const OnChainDatabaseGlyph: React.FC<GlyphProps> = ({ className = "text-[
 /**
  * Animated User Ease Glyph
  */
-export const UserEaseGlyph: React.FC<GlyphProps> = ({ className = "text-[#2F5D50]" }) => {
+export const UserEaseGlyph: React.FC<GlyphProps> = ({ className = "text-[#0C1D30]" }) => {
   return (
     <div className={`relative flex items-center justify-center ${className}`}>
       <svg viewBox="0 0 24 24" fill="none" className="w-full h-full">
@@ -343,7 +343,7 @@ export const UserEaseGlyph: React.FC<GlyphProps> = ({ className = "text-[#2F5D50
 /**
  * Animated Responsive Screen Glyph
  */
-export const ResponsiveScreenGlyph: React.FC<GlyphProps> = ({ className = "text-[#2F5D50]" }) => {
+export const ResponsiveScreenGlyph: React.FC<GlyphProps> = ({ className = "text-[#0C1D30]" }) => {
   return (
     <div className={`relative flex items-center justify-center ${className}`}>
       <svg viewBox="0 0 24 24" fill="none" className="w-full h-full">
@@ -366,26 +366,32 @@ export const ResponsiveScreenGlyph: React.FC<GlyphProps> = ({ className = "text-
 /**
  * Animated Cpu Partner Infrastructure Glyph
  */
-export const CpuPartnerGlyph: React.FC<GlyphProps> = ({ className = "text-[#2F5D50]" }) => {
+export const CpuPartnerGlyph: React.FC<GlyphProps> = ({ className = "text-[#0C1D30]" }) => {
   return (
     <div className={`relative flex items-center justify-center ${className}`}>
-      <svg viewBox="0 0 24 24" fill="none" className="w-full h-full">
-        <rect x="4" y="4" width="16" height="16" rx="2" stroke="currentColor" strokeWidth="1.8" />
-        <motion.rect
-          x="8"
-          y="8"
-          width="8"
-          height="8"
-          rx="1"
-          fill="currentColor"
-          fillOpacity="0.2"
-          stroke="currentColor"
-          strokeWidth="1.5"
-          animate={{ rotate: 360 }}
-          transition={{ duration: 10, repeat: Infinity, ease: "linear" }}
-          style={{ originX: "12px", originY: "12px" }}
-        />
-        <path d="M9 1V4M15 1V4M9 20V23M15 20V23M1 9H4M1 15H4M20 9H23M20 15H23" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" />
+      <svg viewBox="0 0 100 100" fill="none" className="w-full h-full">
+        {/* Connector Pins */}
+        <line x1="36" y1="8" x2="36" y2="20" stroke="currentColor" strokeWidth="5.5" strokeLinecap="round" />
+        <line x1="50" y1="8" x2="50" y2="20" stroke="currentColor" strokeWidth="5.5" strokeLinecap="round" />
+        <line x1="64" y1="8" x2="64" y2="20" stroke="currentColor" strokeWidth="5.5" strokeLinecap="round" />
+        <line x1="36" y1="80" x2="36" y2="92" stroke="currentColor" strokeWidth="5.5" strokeLinecap="round" />
+        <line x1="50" y1="80" x2="50" y2="92" stroke="currentColor" strokeWidth="5.5" strokeLinecap="round" />
+        <line x1="64" y1="80" x2="64" y2="92" stroke="currentColor" strokeWidth="5.5" strokeLinecap="round" />
+        <line x1="8" y1="36" x2="20" y2="36" stroke="currentColor" strokeWidth="5.5" strokeLinecap="round" />
+        <line x1="8" y1="50" x2="20" y2="50" stroke="currentColor" strokeWidth="5.5" strokeLinecap="round" />
+        <line x1="8" y1="64" x2="20" y2="64" stroke="currentColor" strokeWidth="5.5" strokeLinecap="round" />
+        <line x1="80" y1="36" x2="92" y2="36" stroke="currentColor" strokeWidth="5.5" strokeLinecap="round" />
+        <line x1="80" y1="50" x2="92" y2="50" stroke="currentColor" strokeWidth="5.5" strokeLinecap="round" />
+        <line x1="80" y1="64" x2="92" y2="64" stroke="currentColor" strokeWidth="5.5" strokeLinecap="round" />
+        {/* Outer Package */}
+        <rect x="19" y="19" width="62" height="62" rx="9" stroke="currentColor" strokeWidth="5.5" />
+        {/* Inner Die Box */}
+        <rect x="29.5" y="29.5" width="41" height="41" rx="6" fill="#EAA53A" stroke="currentColor" strokeWidth="3.5" />
+        {/* kbridge logo inside inner box */}
+        <path d="M38.5 54 A11.5 11.5 0 0 1 61.5 54" stroke="#0C1D30" strokeWidth="3.3" strokeLinecap="round" fill="none" />
+        <path d="M37 54 L63 54" stroke="#0C1D30" strokeWidth="3.3" strokeLinecap="round" />
+        <path d="M44.5 44 L44.5 59.5" stroke="#0C1D30" strokeWidth="3.3" strokeLinecap="round" />
+        <path d="M55.5 44 L55.5 59.5" stroke="#0C1D30" strokeWidth="3.3" strokeLinecap="round" />
       </svg>
     </div>
   );
@@ -394,7 +400,7 @@ export const CpuPartnerGlyph: React.FC<GlyphProps> = ({ className = "text-[#2F5D
 /**
  * Animated Step 1 Originate Document Glyph
  */
-export const OriginateDocGlyph: React.FC<GlyphProps> = ({ className = "text-[#2F5D50]" }) => {
+export const OriginateDocGlyph: React.FC<GlyphProps> = ({ className = "text-[#0C1D30]" }) => {
   return (
     <div className={`relative flex items-center justify-center ${className}`}>
       <svg viewBox="0 0 24 24" fill="none" className="w-full h-full">
@@ -416,7 +422,7 @@ export const OriginateDocGlyph: React.FC<GlyphProps> = ({ className = "text-[#2F
 /**
  * Animated Step 2 Fractionalize Token Glyph
  */
-export const FractionalizeTokenGlyph: React.FC<GlyphProps> = ({ className = "text-[#2F5D50]" }) => {
+export const FractionalizeTokenGlyph: React.FC<GlyphProps> = ({ className = "text-[#0C1D30]" }) => {
   return (
     <div className={`relative flex items-center justify-center ${className}`}>
       <svg viewBox="0 0 24 24" fill="none" className="w-full h-full">
@@ -445,7 +451,7 @@ export const FractionalizeTokenGlyph: React.FC<GlyphProps> = ({ className = "tex
 /**
  * Animated Step 3 Settlement Transfer Glyph
  */
-export const SettleTransferGlyph: React.FC<GlyphProps> = ({ className = "text-[#2F5D50]" }) => {
+export const SettleTransferGlyph: React.FC<GlyphProps> = ({ className = "text-[#0C1D30]" }) => {
   return (
     <div className={`relative flex items-center justify-center ${className}`}>
       <svg viewBox="0 0 24 24" fill="none" className="w-full h-full">

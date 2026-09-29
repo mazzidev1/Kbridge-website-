@@ -54,7 +54,7 @@ export const Header: React.FC<HeaderProps> = ({
           </button>
           <button 
             onClick={() => scrollTo('security')}
-            className="text-[#3C4859] hover:text-[#101C2B] transition-colors cursor-pointer"
+            className="text-[#30455C] hover:text-[#0C1D30] transition-colors cursor-pointer"
           >
             Security
           </button>
@@ -64,14 +64,14 @@ export const Header: React.FC<HeaderProps> = ({
         <div className="flex items-center gap-2.5 shrink-0">
           <button
             onClick={onOpenWaitlist}
-            className="hidden lg:inline-flex btn btn-ghost btn-sm text-[13px] border border-[#CFCDC0] hover:border-[#101C2B] text-[#101C2B] px-3.5 py-1.5 whitespace-nowrap"
+            className="hidden lg:inline-flex btn btn-ghost btn-sm text-[13px] border border-[#CFCDC0] hover:border-[#0C1D30] hover:text-[#0C1D30] text-[#0C1D30] px-3.5 py-1.5 whitespace-nowrap"
           >
             Join waitlist
           </button>
           
           <button
             onClick={onOpenDemo}
-            className="hidden lg:inline-flex btn btn-primary btn-sm text-[13px] bg-[#101C2B] text-[#F7F7F2] hover:bg-[#1E3D34] px-3.5 py-1.5 whitespace-nowrap shadow-2xs font-medium"
+            className="hidden lg:inline-flex btn btn-primary btn-sm text-[13px] bg-[#0C1D30] text-[#F7F7F2] hover:bg-[#EAA53A] hover:text-[#0C1D30] px-3.5 py-1.5 whitespace-nowrap shadow-2xs font-medium transition-colors"
           >
             Book a demo
           </button>
@@ -79,7 +79,7 @@ export const Header: React.FC<HeaderProps> = ({
           {/* Mobile Hamburger Menu Toggle */}
           <button
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="lg:hidden h-[34px] w-[34px] sm:h-[36px] sm:w-[36px] text-[#101C2B] hover:bg-[#CFCDC0]/50 rounded-[4px] transition-colors cursor-pointer border border-[#CFCDC0] bg-white/80 flex items-center justify-center shrink-0"
+            className="lg:hidden h-[34px] w-[34px] sm:h-[36px] sm:w-[36px] text-[#0C1D30] hover:bg-[#CFCDC0]/50 rounded-[4px] transition-colors cursor-pointer border border-[#CFCDC0] bg-white/80 flex items-center justify-center shrink-0"
             aria-label="Toggle navigation menu"
           >
             {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
@@ -93,25 +93,25 @@ export const Header: React.FC<HeaderProps> = ({
           <div className="flex flex-col gap-1 font-body font-medium text-[15px] border-b border-[#CFCDC0] pb-4">
             <button 
               onClick={() => scrollTo('how')}
-              className="text-left text-[#101C2B] hover:text-[#2F5D50] py-2.5 px-2 rounded hover:bg-black/5 transition-colors"
+              className="text-left text-[#0C1D30] hover:text-[#EAA53A] py-2.5 px-2 rounded hover:bg-black/5 transition-colors"
             >
               How it works
             </button>
             <button 
               onClick={() => scrollTo('for-businesses')}
-              className="text-left text-[#101C2B] hover:text-[#2F5D50] py-2.5 px-2 rounded hover:bg-black/5 transition-colors"
+              className="text-left text-[#0C1D30] hover:text-[#EAA53A] py-2.5 px-2 rounded hover:bg-black/5 transition-colors"
             >
               Get Funded
             </button>
             <button 
               onClick={() => scrollTo('audiences')}
-              className="text-left text-[#101C2B] hover:text-[#2F5D50] py-2.5 px-2 rounded hover:bg-black/5 transition-colors"
+              className="text-left text-[#0C1D30] hover:text-[#EAA53A] py-2.5 px-2 rounded hover:bg-black/5 transition-colors"
             >
               For investors
             </button>
             <button 
               onClick={() => scrollTo('security')}
-              className="text-left text-[#101C2B] hover:text-[#2F5D50] py-2.5 px-2 rounded hover:bg-black/5 transition-colors"
+              className="text-left text-[#0C1D30] hover:text-[#EAA53A] py-2.5 px-2 rounded hover:bg-black/5 transition-colors"
             >
               Security
             </button>
@@ -120,7 +120,7 @@ export const Header: React.FC<HeaderProps> = ({
           <div className="flex flex-col sm:flex-row gap-3 pt-1">
             <button
               onClick={() => { setMobileMenuOpen(false); onOpenDemo(); }}
-              className="w-full btn btn-primary bg-[#101C2B] text-white hover:bg-[#2F5D50] py-3 text-[14px] flex items-center justify-center gap-2 shadow-xs"
+              className="w-full btn btn-primary bg-[#0C1D30] text-white hover:bg-[#EAA53A] hover:text-[#0C1D30] py-3 text-[14px] flex items-center justify-center gap-2 shadow-xs transition-colors"
             >
               <span>Book a demo</span>
               <ArrowRight className="w-4 h-4" />
@@ -128,7 +128,7 @@ export const Header: React.FC<HeaderProps> = ({
             
             <button
               onClick={() => { setMobileMenuOpen(false); onOpenWaitlist(); }}
-              className="w-full btn btn-ghost border border-[#CFCDC0] bg-white text-[#101C2B] py-3 text-[14px] shadow-2xs"
+              className="w-full btn btn-ghost border border-[#CFCDC0] bg-white text-[#0C1D30] hover:border-[#EAA53A] py-3 text-[14px] shadow-2xs"
             >
               Join waitlist
             </button>

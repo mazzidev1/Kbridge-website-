@@ -39,7 +39,7 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-[#EEEEE6] text-[#101C2B] flex flex-col font-body scroll-smooth">
+    <div className="min-h-screen bg-[#EEEEE6] text-[#0C1D30] flex flex-col font-body scroll-smooth">
       {/* Navigation Header */}
       <Header
         onOpenDemo={() => setIsDemoOpen(true)}

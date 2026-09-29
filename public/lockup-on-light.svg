@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 380 90" fill="none">
+  <!-- Circular Icon -->
+  <g transform="translate(10, 9)">
+    <circle cx="36" cy="36" r="36" fill="#EAA53A"/>
+    <!-- Arch -->
+    <path d="M18.7 41.8 A17.3 17.3 0 0 1 53.3 41.8" stroke="#0C1D30" stroke-width="4.9" stroke-linecap="round" fill="none"/>
+    <!-- Crossbar -->
+    <path d="M16.5 41.8 L55.5 41.8" stroke="#0C1D30" stroke-width="4.9" stroke-linecap="round"/>
+    <!-- Vertical Pillars -->
+    <path d="M28.4 27.4 L28.4 49.7" stroke="#0C1D30" stroke-width="4.9" stroke-linecap="round"/>
+    <path d="M43.6 27.4 L43.6 49.7" stroke="#0C1D30" stroke-width="4.9" stroke-linecap="round"/>
+  </g>
+  <!-- Wordmark -->
+  <text x="96" y="56" font-family="'Poppins', 'IBM Plex Sans', sans-serif" font-size="46" font-weight="500" letter-spacing="-0.5px">
+    <tspan fill="#EAA53A">k</tspan><tspan fill="#0C1D30">bridge</tspan>
+  </text>
+</svg>

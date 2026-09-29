@@ -5,7 +5,7 @@ import {
   BellRing, 
   FileDown, 
   Database, 
-  UserCheck, 
+  Coins, 
   MonitorSmartphone 
 } from 'lucide-react';
 
@@ -15,49 +15,49 @@ export const SecuritySection: React.FC = () => {
       id: 'access-control',
       icon: ShieldCheck,
       title: 'Bank-grade access control',
-      desc: 'Role-based permissions, encrypted at rest and in transit, with KYC and AML checks gating every investor account.',
-      color: 'text-[#2F5D50]',
-      bgColor: 'bg-[#2F5D50]/10',
+      desc: 'Role-based permissions, encrypted at rest and in transit, with KYC and AML checks gating every participant account.',
+      color: 'text-[#0C1D30]',
+      bgColor: 'bg-[#EAA53A]/15',
     },
     {
       id: 'notifications',
       icon: BellRing,
       title: 'Real-time notifications',
-      desc: 'Funding milestones, maturity dates, and payouts land the moment they happen — in-portal, by email, or both.',
-      color: 'text-[#2F5D50]',
-      bgColor: 'bg-[#2F5D50]/10',
+      desc: 'Funding milestones, maturity dates, and USDC payouts land the moment they happen — in-portal, by email, or via webhook.',
+      color: 'text-[#0C1D30]',
+      bgColor: 'bg-[#EAA53A]/15',
     },
     {
       id: 'reporting',
       icon: FileDown,
       title: 'Reporting, exported',
-      desc: 'Every position, statement, and audit trail exports to PDF or Excel in one click, formatted for your own records.',
-      color: 'text-[#2F5D50]',
-      bgColor: 'bg-[#2F5D50]/10',
+      desc: 'Every position, statement, and audit trail exports to PDF or Excel in one click, formatted for your own financial records.',
+      color: 'text-[#0C1D30]',
+      bgColor: 'bg-[#EAA53A]/15',
     },
     {
       id: 'ledger',
       icon: Database,
-      title: 'Public, auditable ledger',
-      desc: 'Each invoice and every share sold is recorded on-chain, treated as a public database anyone can independently verify.',
-      color: 'text-[#2F5D50]',
-      bgColor: 'bg-[#2F5D50]/10',
+      title: 'Hedera auditable ledger',
+      desc: 'Each invoice and share pool is recorded on Hedera (HCS & EVM contracts), delivering sub-second finality and immutable auditability.',
+      color: 'text-[#0C1D30]',
+      bgColor: 'bg-[#EAA53A]/15',
     },
     {
-      id: 'ease-of-use',
-      icon: UserCheck,
-      title: 'Built for non-technical users',
-      desc: 'No wallets to manage, no jargon to learn. Investing reads like online banking, not a crypto exchange.',
-      color: 'text-[#2F5D50]',
-      bgColor: 'bg-[#2F5D50]/10',
+      id: 'usdc-native',
+      icon: Coins,
+      title: '100% USDC, zero crypto volatility',
+      desc: 'No volatile crypto tokens to manage. All invoice advances, investor yields, and loan repayments settle entirely in USDC.',
+      color: 'text-[#0C1D30]',
+      bgColor: 'bg-[#EAA53A]/15',
     },
     {
       id: 'responsive',
       icon: MonitorSmartphone,
       title: 'Responsive by design',
-      desc: 'The full shelf and every invoice detail work the same way on desktop, tablet, and phone.',
-      color: 'text-[#2F5D50]',
-      bgColor: 'bg-[#2F5D50]/10',
+      desc: 'The full shelf and every invoice detail work the same way across desktop, tablet, and mobile browsers.',
+      color: 'text-[#0C1D30]',
+      bgColor: 'bg-[#EAA53A]/15',
     },
   ];
 
@@ -72,15 +72,15 @@ export const SecuritySection: React.FC = () => {
           transition={{ duration: 0.5 }}
           className="max-w-[600px] mb-[52px]"
         >
-          <div className="font-body font-semibold text-[12px] tracking-wider uppercase text-[#2F5D50] mb-4 flex items-center gap-2.5">
-            <span className="w-5.5 h-[1px] bg-[#2F5D50]"></span>
-            Built like a bank expects
+          <div className="font-body font-semibold text-[12px] tracking-wider uppercase text-[#0C1D30] mb-4 flex items-center gap-2.5">
+            <span className="w-5.5 h-[1.5px] bg-[#EAA53A]"></span>
+            Built on Hedera • Enterprise Grade
           </div>
-          <h2 className="font-display font-medium text-[28px] sm:text-[34px] tracking-tight leading-[1.18] text-[#101C2B]">
-            Secure by default. Simple enough for anyone to use.
+          <h2 className="font-display font-medium text-[28px] sm:text-[34px] tracking-tight leading-[1.18] text-[#0C1D30]">
+            Secure by default. Powered by the Hedera network.
           </h2>
-          <p className="text-[16px] text-[#3C4859] mt-3.5 max-w-[520px]">
-            kbridge is a portal your clients will actually use — which means the security is invisible and the interface never assumes technical fluency.
+          <p className="text-[16px] text-[#30455C] mt-3.5 max-w-[520px]">
+            Kbridge pairs institutional-grade compliance with Hedera Hashgraph speed and predictable micro-cent fees. Everything operates seamlessly in USDC.
           </p>
         </motion.div>
 
@@ -103,16 +103,16 @@ export const SecuritySection: React.FC = () => {
                   <motion.div 
                     whileHover={{ scale: 1.12, rotate: [0, -5, 5, 0] }}
                     transition={{ duration: 0.3 }}
-                    className="w-[38px] h-[38px] border border-[#101C2B]/80 rounded-full flex items-center justify-center mb-5 bg-[#F7F7F2] group-hover:border-[#2F5D50] group-hover:bg-[#2F5D50]/10 transition-colors shadow-xs"
+                    className="w-[38px] h-[38px] border border-[#0C1D30]/30 rounded-full flex items-center justify-center mb-5 bg-[#F7F7F2] group-hover:border-[#EAA53A] group-hover:bg-[#EAA53A]/15 transition-colors shadow-xs"
                   >
-                    <IconComponent className="w-[18px] h-[18px] text-[#101C2B] group-hover:text-[#2F5D50] transition-colors" />
+                    <IconComponent className="w-[18px] h-[18px] text-[#0C1D30] group-hover:text-[#EAA53A] transition-colors" />
                   </motion.div>
 
-                  <h3 className="text-[16px] font-semibold text-[#101C2B] mb-2 font-body group-hover:text-[#2F5D50] transition-colors">
+                  <h3 className="text-[16px] font-semibold text-[#0C1D30] mb-2 font-body group-hover:text-[#EAA53A] transition-colors">
                     {feat.title}
                   </h3>
                   
-                  <p className="text-[13.5px] text-[#3C4859] leading-relaxed font-body">
+                  <p className="text-[13.5px] text-[#30455C] leading-relaxed font-body">
                     {feat.desc}
                   </p>
                 </div>
@@ -124,4 +124,3 @@ export const SecuritySection: React.FC = () => {
     </section>
   );
 };
-
